@@ -1,0 +1,87 @@
+*
+  font-family: 'Montserrat', sans-serif
+
+.app-header
+  width: 100%
+
+.header-content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+
+.img-content
+  display: flex
+  align-items: center
+
+  img
+    width: 63.98px
+    height: auto
+    cursor: pointer
+
+.dropdown-content
+  display: flex
+  gap: 2rem
+
+  a
+    color: #fff
+
+  i
+    font-size: 10px
+    padding-left: 5px
+
+.fecha
+  font-weight: bold
+
+/** Juan parce ajustar estos estilos **/
+
+.language-selector
+  position: relative
+  display: flex
+  align-items: center
+  font-size: 14px
+
+  select
+    background-color: #2c3e50
+    color: #ffffff
+    border: none
+    padding: 5px 10px
+    font-size: 14px
+    border-radius: 4px
+    cursor: pointer
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+
+  select:focus
+    outline: none
+
+  &::after
+    content: '▼'
+    position: absolute
+    right: 10px
+    pointer-events: none
+    color: #ffffff
+    font-size: 12px
+/** Hasta acá**/
+  
+  
+.custom-menu
+  width: 187px !important
+  color: red
+
+  .custom-menu-item
+    display: flex
+    align-items: center
+    gap: 10px
+
+    i
+      font-size: 18px
+
+
+.my-image
+  width: 63.98px
+  height: 39.98px
+  background-image: url('../../../../assets/images/logo-negro.png')
+  background-size: cover
+  background-repeat: no-repeat

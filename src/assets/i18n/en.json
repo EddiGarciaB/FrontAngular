@@ -1,0 +1,82 @@
+{
+  "LOGIN": {
+    "WELCOME": "Welcome!",
+    "DESCRIPTION": "To the largest Crowdfunding system in Latin America",
+    "USER_LABEL": "User",
+    "USER_PLACEHOLDER": "Enter user",
+    "PASSWORD_LABEL": "Password",
+    "PASSWORD_PLACEHOLDER": "Enter password",
+    "LOGIN_BUTTON": "Login",
+    "COPYRIGHT": "© Copyright Starkent 2024. All rights reserved - Version 1.0"
+  },
+  "HEADER": {
+    "CURRENT_DATE": "Current date",
+    "USER_MENU": {
+      "HELP": "Help",
+      "LOGOUT": "Logout"
+    },
+    "LANGUAGE": {
+      "ENGLISH": "English",
+      "SPANISH": "Spanish"
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© Copyright Starken 2024. All rights reserved - Version 1.0"
+  },
+  "TABLE": {
+    "USER_CONTRIBUTIONS": "User Contributions",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "AMOUNT_COP": "Amount (COP)"
+  },
+  "SUBHEADER": {
+    "REVISION_DETECCIONES": {
+      "TITLE": "Contribution Summary",
+      "DESCRIPTIONS": "You can view the users who have contributed, their email, and their amount"
+    },
+    "APROBACION_DETECCIONES": {
+      "TITLE": "Approval and signing of fines",
+      "DESCRIPTIONS": "SOAT, RTM, Pico y Placa, Red light, Heavy vehicles, Speed"
+    },
+    "ADMON_CAMARAS": {
+      "TITLE": "Manage cameras",
+      "DESCRIPTIONS": "Allows managing information of electronic detection cameras"
+    },
+    "GROUP_REVIEW": "Group review",
+    "INDIVIDUAL_REVIEW": "Individual review"
+  },
+  "SIDEBAR": {
+    "USUARIOS": "Users",
+    "REVISION_DE_USUARIOS": "User Review",
+    "CAMPAÑAS": "Campaigns",
+    "REGISTRAR_CAMPAÑA": "Register Campaign",
+    "TOTAL_RECAUDADO": "Total Collected",
+    "RESUMEN_MES": "Monthly Summary"
+  },
+  "TABLEU": {
+    "USER_NAME": "User Name",
+    "EMAIL": "Email",
+    "LAST_CONTRIBUTION_DATE": "Last Contribution Date",
+    "ACTIONS": "Actions",
+    "CHANGE_PASSWORD": "Change Password"
+  },
+  "MODAL": {
+    "CHANGE_PASSWORD_TITLE": "Change Password",
+    "NEW_PASSWORD": "New Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "SUBMIT": "Submit"
+  },
+  "FORM": {
+    "TITLE": "Title",
+    "DESCRIPTION": "Description",
+    "CURRENCY": "Currency",
+    "TARGET_AMOUNT": "Target Amount",
+    "SUBMIT": "Submit"
+  },
+  "SUMMARY": {
+    "USER_NAME": "User Name",
+    "COUNTRY": "Country",
+    "AMOUNT": "Amount",
+    "TOTAL_AMOUNT": "Total Amount"
+  }
+}

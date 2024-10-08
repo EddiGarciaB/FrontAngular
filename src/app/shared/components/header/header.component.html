@@ -1,0 +1,49 @@
+<header class="app-header">
+  <div class="header-content">
+    <div class="img-content">
+      <div class="my-image"></div>
+    </div>
+    <div class="dropdown-content">
+      <span>{{ 'HEADER.CURRENT_DATE' | translate }} <span class="fecha" id="fecha">{{ getToday() }}</span></span>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menuUser">
+        {{ nombreUsuario }}
+        <i>
+          <svg xmlns="http://www.w3.org/2000/svg" height="10" width="8.75" viewBox="0 0 448 512">
+            <path fill="#ffffff"
+                  d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224
+                  274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+          </svg>
+        </i>
+      </a>
+      <nz-dropdown-menu #menuUser="nzDropdownMenu" class="custom-dropdown-menu">
+        <ul nz-menu class="custom-menu">
+          <li nz-menu-item>
+            <div class="custom-menu-item">
+              <span>{{ 'HEADER.USER_MENU.HELP' | translate }}</span>
+            </div>
+          </li>
+          <li nz-menu-item (click)="logout()">
+            <div class="custom-menu-item">
+              <i class="icon icon-sign-out-o"></i>
+              <span>{{ 'HEADER.USER_MENU.LOGOUT' | translate }}</span>
+            </div>
+          </li>
+        </ul>
+      </nz-dropdown-menu>
+      <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menuLanguage">
+        {{ currentLanguage | translate }}
+        <span nz-icon nzType="down"></span>
+      </a>
+      <nz-dropdown-menu #menuLanguage="nzDropdownMenu" class="custom-dropdown-menu">
+        <ul nz-menu class="custom-menu">
+          <li nz-menu-item (click)="changeLanguage('en')">
+            <span>{{ 'HEADER.LANGUAGE.ENGLISH' | translate }}</span>
+          </li>
+          <li nz-menu-item (click)="changeLanguage('es')">
+            <span>{{ 'HEADER.LANGUAGE.SPANISH' | translate }}</span>
+          </li>
+        </ul>
+      </nz-dropdown-menu>
+    </div>
+  </div>
+</header>

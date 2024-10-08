@@ -1,0 +1,13 @@
+<div class="campaign-list">
+    <app-campaigns
+      *ngFor="let campaign of visibleCampaigns"
+      [imageUrl]="campaign.imageUrl"
+      [title]="campaign.title"
+      [country]="campaign.country"
+      [amountRaised]="campaign.amountRaised"
+      [currency]="campaign.currency"
+      [donors]="campaign.donors"
+      [endDate]="campaign.endDate">
+    </app-campaigns>
+  </div>
+  

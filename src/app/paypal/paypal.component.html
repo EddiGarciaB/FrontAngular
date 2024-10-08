@@ -1,0 +1,19 @@
+<div class="paypal-payment-container">
+  <h2>Pago con PayPal</h2>
+  <p class="instruction">Por favor, ingrese su correo de PayPal para proceder con el pago seguro.</p>
+
+  <nz-card>
+    <form [formGroup]="paypalForm" (ngSubmit)="submit()">
+      <nz-form-item>
+        <nz-form-label nzFor="paypal_email">Correo de PayPal</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor ingrese un correo válido">
+          <input nz-input formControlName="paypal_email" id="paypal_email" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <p class="instructions-text">* Asegúrese de que su correo esté vinculado a su cuenta de PayPal.</p>
+
+      <button nz-button nzType="primary" [disabled]="!paypalForm.valid" (click)="navigateToTahnk()">Pagar con PayPal</button>
+    </form>
+  </nz-card>
+</div>

@@ -1,0 +1,60 @@
+<div class="payment-page-container">
+  <div class="payment-content">
+    <!-- Formulario de pago -->
+    <nz-card class="payment-form-card">
+      <h2>Pago Seguro con Tarjeta</h2>
+      <p class="instruction">Por favor, ingrese los detalles de su tarjeta para completar la compra. Este formulario es seguro y encriptado.</p>
+      
+      <form [formGroup]="creditCardForm" (ngSubmit)="submit()">
+        <!-- Nombre del titular -->
+        <nz-form-item>
+          <nz-form-label nzFor="cardholder_name">Nombre del Titular</nz-form-label>
+          <nz-form-control nzErrorTip="Por favor ingrese el nombre del titular">
+            <input nz-input formControlName="cardholder_name" id="cardholder_name" placeholder="Nombre del titular" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- Número de tarjeta -->
+        <nz-form-item>
+          <nz-form-label nzFor="card_number">Número de Tarjeta</nz-form-label>
+          <nz-form-control nzErrorTip="Por favor ingrese el número de tarjeta">
+            <input nz-input formControlName="card_number" id="card_number" placeholder="Número de tarjeta" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- Fecha de expiración -->
+        <nz-form-item>
+          <nz-form-label nzFor="expiry_date">Fecha de Expiración</nz-form-label>
+          <nz-form-control nzErrorTip="Por favor ingrese la fecha de expiración">
+            <input nz-input formControlName="expiry_date" id="expiry_date" placeholder="MM/YY" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- CVV -->
+        <nz-form-item>
+          <nz-form-label nzFor="cvv">CVV</nz-form-label>
+          <nz-form-control nzErrorTip="Por favor ingrese el CVV">
+            <input nz-input formControlName="cvv" id="cvv" placeholder="CVV" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- Loader visible solo cuando isLoading es true -->
+        <div *ngIf="isLoading" class="loader">
+          <p>Procesando su pago...</p>
+        </div>
+
+        <p class="instructions-text">* Su pago será procesado de forma segura.</p>
+
+        <!-- Deshabilitar el botón cuando isLoading es true -->
+        <button nz-button nzType="primary" class="pay-button" [disabled]="isLoading || !creditCardForm.valid" (click)="submit()">Pagar</button>
+      </form>
+    </nz-card>
+
+    <!-- Imagen decorativa -->
+    <div class="image-container">
+      <div class="image-overlay">
+        Pago Seguro
+      </div>
+    </div>
+  </div>
+</div>

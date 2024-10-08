@@ -1,0 +1,48 @@
+.dashboard-container
+  display: flex
+  flex-direction: column
+  height: 100%
+  background-color: #fbfbfb
+  overflow-x: clip
+  justify-content: space-between
+
+  app-header
+    background-color: #F5B833
+    color: white
+    height: 50px
+    width: 100%
+    padding: 0 70px
+    position: fixed
+    display: flex
+    align-items: center
+    z-index: 8
+
+  .content
+    display: flex
+    width: 100%
+
+  .dashboard-main
+    display: flex
+    flex-direction: column
+    width: 100vw
+    height: 100%
+    background-color: #FBFBFB
+    padding-top: 50px
+    padding-left: 50px
+
+  .subheader-content
+    height: auto
+
+  microfrontend-dei-sidebar
+    min-width: auto
+    position: fixed
+    height: 100vh
+    padding-top: 50px
+    z-index: 8
+
+  app-footer
+    position: relative
+    bottom: 0
+    left: 0
+    right: 0
+    padding-left: 50px

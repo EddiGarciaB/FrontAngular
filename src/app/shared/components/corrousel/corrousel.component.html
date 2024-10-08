@@ -1,0 +1,40 @@
+<div class="card-body">
+<div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <video class="img-responsive videoPlay" *ngIf="activeImage.mimeType == '.mp4'" controls (click)="toggleVideo()" #videoPlayer>
+          <source [src]="activeImage.source" type="video/mp4" />
+          Browser not supported
+        </video>
+        <img *ngIf="activeImage.mimeType != '.mp4'" [src]="activeImage.source" alt="Active Image" class="img-responsive">
+      </div>
+      <div class="nav-container">
+        <span nz-icon nzType="left" nzTheme="outline" class="nav-left navs ml-nav" (click)="prevSlide()"
+        ></span>
+      <div class="carousel-indicators">
+        <div *ngFor="let image of visibleImagesLs; let i = index" (click)="setActiveImage(image, i)"
+             [class.active]="activeImage.source === image.source">
+          <ng-container *ngIf="image.mimeType == '.mp4'">
+            <video class="img-responsive videoPreview" [src]="image.source" muted loop>
+                <source type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <svg class="play-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </ng-container>
+          <ng-container *ngIf="image.mimeType != '.mp4'">
+              <img [src]="image.source" alt="Thumbnail" class="img-responsive">
+          </ng-container>
+        </div>
+      </div>
+        <span nz-icon nzType="right" nzTheme="outline" class="nav-right navs mr-nav" (click)="nextSlide()"
+              ></span>
+      </div>
+      <div class="dots-container" >
+        <span *ngFor="let groupIndex of getDotGroups()" (click)="setActiveImageInGroup(groupIndex)"
+              [class.active]="calculatePage() === groupIndex" class="dot"></span>
+      </div>
+    </div>
+  </div>
+</div>

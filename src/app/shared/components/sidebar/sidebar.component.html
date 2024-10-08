@@ -1,0 +1,25 @@
+<div *ngIf="menuItems.length > 0">
+  <nav class="app-sidebar">
+    <div class="sidebar-content">
+      <div class="sidebar-item text-center" routerLink="/dashboard/resumen" nz-tooltip nzTooltipTitle="Inicio" nzTooltipPlacement="right">
+        <span class="icon-home-alt"></span>
+      </div>
+    </div>
+    <div *ngFor="let item of menuItems" class="sidebar-content">
+      <div class="sidebar-item text-center"
+        (click)="toggleSubMenu(item.headerItem.num)" [class.active]="activeSubMenu === item.headerItem.num" nz-tooltip
+        nzTooltipTitle="{{ 'SIDEBAR.' + item.headerItem.tooltipName | translate }}" nzTooltipPlacement="right">
+        <span class="icon {{ item.headerItem.icon }}"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div *ngFor="let menuItem of menuItems" class="nav-item" [class.active]="activeSubMenu === menuItem.activeSubMenu">
+    <p class="menu-title">{{ 'SIDEBAR.' + menuItem.title | translate }}</p>
+    <ul>
+      <div *ngFor="let item of menuItem.items">
+        <li routerLink="{{ item.route }}">{{ 'SIDEBAR.' + item.name | translate }}</li>
+      </div>
+    </ul>
+  </div>
+</div>

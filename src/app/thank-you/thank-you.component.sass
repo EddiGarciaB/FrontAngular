@@ -1,0 +1,100 @@
+.thank-you-container 
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background-color: #f0f2f5
+  padding: 20px
+  margin-top: 10%
+
+.thank-you-message 
+  text-align: center
+  max-width: 600px
+  background-color: #fff
+  padding: 30px
+  border-radius: 12px
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1)
+
+  img.thank-you-image
+    max-width: 100%
+    height: auto
+    margin-bottom: 20px
+    border-radius: 8px
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+
+  h1 
+    color: #4caf50
+    font-size: 2.5rem
+    margin-bottom: 10px
+
+    @media (max-width: 768px)
+      font-size: 2rem
+
+  h2 
+    font-size: 1.5rem
+    color: #333
+    margin-bottom: 10px
+
+  p.participation-code
+    font-size: 1.8rem
+    color: #4caf50
+    font-weight: bold
+    margin-bottom: 20px
+
+  canvas
+    margin: 20px auto
+    display: block
+    width: 150px
+    height: 150px
+  
+  .compra
+    font-weight: bold
+
+
+  button[nz-button]
+    font-size: 1.1rem
+    padding: 10px 20px
+    background-color: #4caf50
+    border: none
+    border-radius: 8px
+    cursor: pointer
+
+    &:hover
+      background-color: darken(#4caf50, 10%)
+
+
+// Estilos para el botón de pago con intermitencia rápida y llamativa en tonos de verde ajustados
+.pay-button
+  background-color: #4caf50 // Color base verde
+  color: white
+  border-radius: 8px
+  padding: 2px 20px !important // Padding ajustado para un tamaño adecuado !important // Ajusta el tamaño de la fuente para que el texto sea más visible
+  width: auto
+  display: inline-block // Cambia a inline-block para evitar que el botón sea demasiado grande
+  margin: 20px auto // Centra el botón horizontalmente
+  border: none
+  text-align: center // Asegura que el texto esté centrado en el botón
+  animation: pulse 0.8s infinite ease-in-out // Animación más rápida
+  transition: background-color 0.4s ease // Transición más rápida
+
+  &:hover
+    background-color: darken(#4caf50, 10%) // Ajuste para que no se oscurezca demasiado
+
+  &:disabled
+    background-color: lighten(#4caf50, 30%)
+    cursor: not-allowed
+
+  @media (max-width: 768px)
+    font-size: 1rem
+    padding: 8px 30px
+
+// Definición de la animación "pulse" con ajustes en los tonos de verde
+@keyframes pulse
+  0%
+    background-color: lighten(#4caf50, 15%) // Color más claro ajustado
+  50%
+    background-color: darken(#4caf50, 10%) // Color más oscuro pero no tan intenso como antes
+  100%
+    background-color: lighten(#4caf50, 15%) // Volver al color más claro
+
+

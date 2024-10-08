@@ -1,0 +1,54 @@
+<section class="hero">
+    <div class="header">
+        <div class="header-logo">
+            <img class="logo" src="assets/images/logo-amarillo.png" alt="">
+        </div>
+        <!-- <div class="header-botton">
+            <button class="btn-registro" (click)="navigateToRegister()">Campaña</button>
+            <button class="btn-login" (click)="navigateToLogin()">Inicio de Sesión</button>
+
+        </div> -->
+    </div>
+    <div class="main">
+        <div class="div-main">
+            <div class="div-main_text">
+                <h1 class="title-hero">
+                  ¡HAZ TUS SUEÑOS REALIDAD PARTICIPANDO!
+                </h1>
+            </div>
+            <div class="div-main_btn">
+                <!-- <button class="btn-apoyar " (click)="navigateToCompaint()">VER CAMPPAÑAS ACTUALES</button>
+                <button class="btn-crear"  (click)="navigateToCompaint()">VER TODAS LAS CAMPAÑAS</button> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-about">
+    <div class="about-container">
+      <div class="about-info">
+        <h4 class="about-title">¡HAZ TUS SUEÑOS REALIDAD PARTICIPANDO!</h4>
+        <p class="about-description">Acepta los términos y condiciones para participar:</p>
+        <label class="terms-label">
+          <input type="checkbox" class="terms-checkbox" [(ngModel)]="termsAccepted"> Acepto los términos
+        </label>
+        <p class="about-action">
+          <!-- Deshabilitar el botón si no se ha aceptado los términos -->
+          <button 
+            class="btn-participar" 
+            [class.active]="termsAccepted" 
+            [disabled]="!termsAccepted"
+            (click)="navigateToPay()">
+            Participar
+          </button>
+        </p>
+      </div>
+      <div class="about-image">
+        <img class="img-pay" src="assets/images/home2.png" alt="Imagen de campañas" style="width: 50%; height: auto; display: block; margin: 0 auto;">
+
+      </div>
+    </div>
+</section>
+  
+  
+

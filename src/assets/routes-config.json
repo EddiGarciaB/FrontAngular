@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/dashboard/resumen",
+    "title": "SUBHEADER.REVISION_DETECCIONES.TITLE",
+    "descriptions": "SUBHEADER.REVISION_DETECCIONES.DESCRIPTIONS",
+    "showSubheader": true
+  },
+  {
+    "path": "/dashboard/admon",
+    "title": "SUBHEADER.APROBACION_DETECCIONES.TITLE",
+    "descriptions": "SUBHEADER.APROBACION_DETECCIONES.DESCRIPTIONS",
+    "showSubheader": true
+  },
+  {
+    "path": "/dashboard/donation",
+    "title": "SUBHEADER.ADMON_CAMARAS.TITLE",
+    "descriptions": "SUBHEADER.ADMON_CAMARAS.DESCRIPTIONS",
+    "showSubheader": true
+  },
+  {
+    "path": "/dashboard/summary",
+    "title": "SUBHEADER.ADMON_C.TITLE",
+    "descriptions": "SUBHEADER.ADMON_C.DESCRIPTIONS",
+    "showSubheader": true
+  },
+  {
+    "path": "/dashboard",
+    "showSubheader": false
+  }
+]

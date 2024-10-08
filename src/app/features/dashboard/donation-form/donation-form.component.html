@@ -1,0 +1,39 @@
+<nz-card class="donation-card">
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="title">{{ 'FORM.TITLE' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="14" nzErrorTip="Please enter the title">
+        <input nz-input formControlName="title" id="title" placeholder="Enter the title" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="description">{{ 'FORM.DESCRIPTION' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="14" nzErrorTip="Please enter the description">
+        <textarea nz-input formControlName="description" id="description" placeholder="Enter the description"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="currency">{{ 'FORM.CURRENCY' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="14" nzErrorTip="Please select a currency">
+        <nz-select formControlName="currency" id="currency" placeholder="Select a currency">
+          <nz-option *ngFor="let currency of currencies" [nzLabel]="currency.label" [nzValue]="currency.value"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="targetAmount">{{ 'FORM.TARGET_AMOUNT' | translate }}</nz-form-label>
+      <nz-form-control [nzSpan]="14" nzErrorTip="Please enter a valid amount">
+        <input nz-input type="number" formControlName="targetAmount" id="targetAmount" placeholder="Enter the target amount" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary">{{ 'FORM.SUBMIT' | translate }}</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>

@@ -1,0 +1,18 @@
+<!-- campaigns.component.html -->
+<div class="campaign-card">
+  <img [src]="imageUrl" alt="{{ title }}" class="campaign-image">
+  <h2 class="campaign-title">{{ title }} <span class="campaign-country">{{ country }}</span></h2>
+  <div class="campaign-info">
+      <p>Recaudo <strong>{{ amountRaised | currency:currency:'symbol':'1.0-0' }}</strong></p>
+      <p>{{ donors }} donantes</p>
+  </div>
+  <div class="campaign-timer">
+      <p>Vence</p>
+      <time>{{ endDate | date:'mediumDate' }}</time>
+  </div>
+  <div class="campaign-actions">
+        <button class="btn-more" (click)="navigateToVer()">Ver más</button>
+
+      <button class="btn-donate" (click)="navigateToDonar()">Participar</button>
+  </div>
+</div>

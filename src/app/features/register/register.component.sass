@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap')
+
+
+
+.login-container
+  height: 100vh
+  background-color: #F5B833
+
+.bg--container
+  background-image: url('../../../assets/images/login.png')
+  background-repeat: none
+  background-size: cover
+  img
+    width: 30%
+
+.login
+  height: calc( 100% - 30px )
+
+  h2
+    color: #262236
+    font-size: 26px
+
+  p
+    color: #1A1F2F
+
+.font-weight-bold
+  font-weight: 700
+
+footer
+  color: #848D95
+
+label
+  color: #4E4E4E
+  font-size: 16px
+
+.ant-btn-primary
+  background-color: #335AB7
+  border-color: #335AB7
+
+  &:hover
+    background-color: #597AC8
+    border-color: #597AC8
+
+  &:active
+    background-color: #294B9E
+    border-color: #294B9E
+
+.ant-input
+  &:focus
+    border-color: #335AB7
+
+.form-group
+  display: block
+  margin-bottom: 1rem
+
+$facebook-color: #3b5998
+$google-color: #db4437
+
+.social-buttons
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  .btn
+    display: inline-block
+    width: 200px
+    padding: 10px
+    text-align: center
+    text-decoration: none
+    color: white
+    border-radius: 5px
+    font-family: Arial, sans-serif
+    font-size: 16px
+    transition: background 0.3s
+
+    &.facebook
+      background-color: $facebook-color
+
+      &:hover
+        background-color: darken($facebook-color, 10%)
+
+    &.instagram
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
+
+      &:hover
+        filter: brightness(1.1)
+
+    &.google
+      background-color: $google-color
+
+      &:hover
+        background-color: darken($google-color, 10%)
+
+
+.registe-login
+    margin-top:5%
+
+
+@media (max-width: 768px)
+
+  .login-container
+    display: block
+
+    .div-two
+      display: block
+
+  .div-form
+    width: 200% !important
+    max-width: none
+
+  .login-register
+    width: 200%
+    max-width: none
+    padding-left: 0px
+    padding-right: 0px
+
+  .bg--container
+    background-image: url('../../../assets/images/login.png')
+    background-repeat: none
+    background-size: cover
+  img
+    width: 20%
+
+
+@media (max-width: 480px)

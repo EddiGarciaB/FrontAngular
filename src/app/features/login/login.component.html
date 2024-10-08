@@ -1,0 +1,47 @@
+<div class="container-fluid login-container">
+  <div class="row h-100">
+    <div class="col-6 h-100">
+      <div class="row align-items-center justify-content-center login">
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <h2 class="font-weight-bold">{{ 'LOGIN.WELCOME' | translate }}</h2>
+              <p>{{ 'LOGIN.DESCRIPTION' | translate }}</p>
+            </div>
+          </div>
+          <form [formGroup]="validateForm" action="">
+            <div class="row align-items-center flex-column">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="usuario">{{ 'LOGIN.USER_LABEL' | translate }}</label>
+                  <input nz-input placeholder="{{ 'LOGIN.USER_PLACEHOLDER' | translate }}" formControlName="userName" type="text" id="usuario"/>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="contraseña">{{ 'LOGIN.PASSWORD_LABEL' | translate }}</label>
+                  <input nz-input placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}" formControlName="password" type="password" id="contraseña"/>
+                </div>
+              </div>
+              <div class="col-6">
+                <button nz-button nzType="primary" nzBlock (click)="submitForm()">{{ 'LOGIN.LOGIN_BUTTON' | translate }}</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="row justify-content-center">
+        <div class="col-auto">
+          {{ 'LOGIN.COPYRIGHT' | translate }}
+        </div>
+      </footer>
+    </div>
+    <div class="col-6 h-100">
+      <div class="bg--container h-100">
+        <div class="d-flex justify-content-center align-items-center h-100 img-fluid">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

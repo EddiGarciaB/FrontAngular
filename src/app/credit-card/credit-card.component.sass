@@ -1,0 +1,152 @@
+// Contenedor principal de la página de pago
+.payment-page-container
+  margin-top: 8%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  min-height: 100vh // Asegura que el contenedor principal ocupe toda la altura de la ventana
+  max-width: 100% // Para asegurar que el contenedor no se desborde
+  padding: 20px // Un poco de padding para dar espacio a los lados
+  background-color: #f5f5f5
+  box-sizing: border-box // Para incluir padding y border en el tamaño del contenedor
+  overflow: hidden // Evita cualquier desbordamiento no deseado
+
+// Contenedor del formulario y texto "Pago Seguro"
+.payment-content
+  display: flex
+  flex-direction: column // Coloca el formulario y texto uno encima del otro en pantallas pequeñas
+  justify-content: center
+  align-items: center
+  max-width: 500px
+  width: 100% // Asegura que el contenido no desborde horizontalmente
+  background-color: #ffffff
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1)
+  border-radius: 12px
+  overflow: hidden
+  padding: 40px 20px
+  box-sizing: border-box
+
+  @media (min-width: 1024px)
+    flex-direction: column // Mantiene el formulario y texto uno debajo del otro incluso en pantallas grandes
+    max-width: 1000px // Ancho máximo para pantallas grandes
+    padding: 40px
+
+  @media (max-width: 768px)
+    flex-direction: column
+    max-width: 100%
+    padding: 20px
+
+// Estilos del formulario de pago
+.payment-form-card
+  flex: 1
+  padding: 40px
+  background-color: #ffffff
+  box-sizing: border-box // Asegura que el padding no cause desbordamiento
+  max-width: 100%
+  width: 100% // Ocupa todo el ancho del contenedor
+
+  @media (max-width: 768px)
+    padding: 30px 20px
+
+  h2
+    text-align: center
+    color: #4caf50 // Color primario para el título
+    margin-bottom: 20px
+    font-size: 2rem
+
+    @media (max-width: 768px)
+      font-size: 1.8rem
+
+  p.instruction
+    text-align: center
+    color: #333 // Color del texto de instrucción
+    font-size: 1.1rem
+    margin-bottom: 30px
+
+    @media (max-width: 768px)
+      font-size: 1rem
+
+  form
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+    @media (max-width: 768px)
+      gap: 15px
+
+  nz-form-item
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+  nz-form-label
+    color: #333 // Color del texto de la etiqueta
+    font-weight: bold
+    font-size: 1.2rem
+
+    @media (max-width: 768px)
+      font-size: 1rem
+
+  nz-form-control
+    input[nz-input]
+      padding: 12px
+      font-size: 1rem
+      border-radius: 8px
+      border: 1px solid #e0e0e0
+      transition: border 0.3s ease
+
+      &:focus
+        border-color: #4caf50 // Color primario en el borde al hacer foco
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3)
+
+      @media (max-width: 768px)
+        font-size: 0.9rem
+
+  button[nz-button]
+    background-color: #4caf50 // Color primario para el botón
+    color: #ffffff
+    border-radius: 8px
+    padding: 12px 0
+    width: 60%
+    margin-left: 25%
+    font-size: 1.2rem
+    cursor: pointer
+    border: none
+    transition: background-color 0.3s ease
+    text-align: center // Asegura que el texto esté centrado en el botón
+
+    &:hover
+      background-color: darken(#4caf50, 10%)
+
+    &:disabled
+      background-color: lighten(#4caf50, 30%)
+      cursor: not-allowed
+
+    @media (max-width: 768px)
+      padding: 1px 10px
+
+// Estilos para texto adicional de Pago Seguro
+.payment-secure-text
+  text-align: center
+  color: #4caf50 // Color primario para el texto "Pago Seguro"
+  font-size: 2rem
+  font-weight: bold
+  margin-top: 20px
+
+  @media (max-width: 768px)
+    font-size: 1.5rem
+
+
+.loader 
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 10px
+
+
+.loader p 
+  font-size: 16px
+  color: #4CAF50
+  font-weight: bold
+

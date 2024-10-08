@@ -1,0 +1,102 @@
+// Variables
+$primary-color: #4CAF50
+$secondary-color: #ffffff
+$border-color: #e0e0e0
+$error-color: #f44336
+$background-light: #f5f5f5
+
+// Estilo general del contenedor del formulario
+.bank-transfer-container
+  padding: 40px
+  background-color: $background-light
+  border-radius: 12px
+  max-width: 600px
+  margin: 50px auto
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1)
+  position: relative
+
+  h2
+    text-align: center
+    color: $primary-color
+    margin-bottom: 20px
+
+  p.instruction
+    text-align: center
+    color: #666
+    font-size: 1.1rem
+    margin-bottom: 30px
+
+  .bank-account-info
+    background-color: #e9f5e9
+    padding: 15px
+    border-radius: 8px
+    text-align: center
+    font-size: 1.2rem
+    font-weight: bold
+    color: #333
+
+// Estilos del formulario interno
+form
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+// Estilos para los inputs del formulario
+nz-form-item
+  display: flex
+  flex-direction: column
+  gap: 5px
+
+nz-form-label
+  color: #333
+  font-weight: bold
+
+nz-form-control
+  input[nz-input]
+    padding: 12px
+    font-size: 1em
+    border-radius: 8px
+    border: 1px solid $border-color
+    transition: border 0.3s ease
+
+    &:focus
+      border-color: $primary-color
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.3)
+
+  input[type="file"]
+    padding: 8px
+    font-size: 0.9em
+    border-radius: 8px
+    border: 1px solid $border-color
+    transition: border 0.3s ease
+    background-color: #fff
+    cursor: pointer
+
+// Botón de pago
+button[nz-button]
+  background-color: $primary-color
+  color: $secondary-color
+  border-radius: 8px
+  padding: 12px 0
+  font-size: 1.2em
+  cursor: pointer
+  border: none
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: darken($primary-color, 10%)
+
+  &:disabled
+    background-color: lighten($primary-color, 30%)
+    cursor: not-allowed
+
+// Estilos para los textos adicionales
+.instructions-text
+  text-align: center
+  color: #777
+  font-size: 1rem
+  margin-bottom: 10px
+
+@media (max-width: 768px)
+  .bank-transfer-container
+    max-width: 90%

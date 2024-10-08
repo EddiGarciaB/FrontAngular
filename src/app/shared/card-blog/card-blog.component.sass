@@ -1,0 +1,61 @@
+.card-container
+  display: flex
+  justify-content: space-around
+  margin: 2%
+  width: 100%
+  flex-wrap: wrap  // Permitir que las tarjetas se ajusten en varias líneas para pantallas más pequeñas
+
+.card
+  background-color: white
+  border: 1px solid #ccc
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1)
+  border-radius: 10px
+  width: 300px
+  height: 400px
+  padding: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-left: 2%
+  margin-right: 2%
+
+button
+  background-color: #f0ad4e
+  border: none
+  border-radius: 20px
+  padding: 10px 15px
+  color: white
+  margin-top: auto
+  cursor: pointer
+  outline: none
+
+  &:hover
+    background-color: darken(#f0ad4e, 10%)
+
+
+// Responsividad usando media queries
+@media (max-width: 1024px)
+  .card-container
+    justify-content: space-between  // Ajustar el espacio entre las tarjetas para pantallas medianas
+
+  .card
+    width: 45%  // Cambiar el tamaño de las tarjetas para que ocupen menos espacio en pantallas medianas
+    margin-bottom: 20px  // Añadir espacio entre las tarjetas en pantallas medianas
+
+@media (max-width: 768px)
+  .card-container
+    justify-content: center  // Centrar las tarjetas en pantallas pequeñas
+
+  .card
+    width: 80%  // Hacer que las tarjetas ocupen más espacio en pantallas pequeñas
+
+@media (max-width: 480px)
+  .card
+    width: 100%  // Hacer que las tarjetas ocupen el 100% del ancho en pantallas muy pequeñas
+    padding: 15px  // Reducir el padding para optimizar el espacio en móviles
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 20px
+
+  button
+    padding: 8px 12px  // Reducir el tamaño del botón en pantallas pequeñas

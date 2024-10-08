@@ -1,0 +1,26 @@
+<nz-card class="summary-card">
+    <nz-select [(ngModel)]="selectedCurrency" (ngModelChange)="onCurrencyChange()" class="currency-select">
+      <nz-option nzValue="USD" nzLabel="Dollar"></nz-option>
+      <nz-option nzValue="COP" nzLabel="Peso Colombiano"></nz-option>
+    </nz-select>
+    <nz-table #basicTable [nzData]="filteredUsers" nzBordered [nzShowPagination]="true" [nzPageSize]="5">
+      <thead>
+        <tr>
+          <th>{{ 'SUMMARY.USER_NAME' | translate }}</th>
+          <th>{{ 'SUMMARY.COUNTRY' | translate }}</th>
+          <th>{{ 'SUMMARY.AMOUNT' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of basicTable.data">
+          <td>{{ user.name }}</td>
+          <td>{{ user.country }}</td>
+          <td>{{ user.amount | currency: selectedCurrency }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+    <div class="total-amount">
+      {{ 'SUMMARY.TOTAL_AMOUNT' | translate }}: {{ totalAmount | currency: selectedCurrency }}
+    </div>
+  </nz-card>
+  

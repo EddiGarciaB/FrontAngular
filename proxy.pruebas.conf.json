@@ -1,0 +1,15 @@
+{
+  "/api": {
+    "target": "http://10.125.96.199:8082",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/auth": {
+    "target": "http://10.125.96.199:8082",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

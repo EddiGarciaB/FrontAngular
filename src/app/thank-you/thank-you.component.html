@@ -1,0 +1,25 @@
+<div class="thank-you-container">
+  <div class="thank-you-message">
+    <img src="assets/images/2.jpg" alt="Thank You" class="thank-you-image">
+    <p class="compra">
+      Tu pago ha sido procesado 
+      ✅
+      exitosamente.
+    </p>
+    
+    
+    
+    <h1>¡Gracias por tu compra!</h1>
+    
+
+    <!-- Código QR generado manualmente usando Canvas -->
+    <canvas #canvas></canvas>
+    
+    <h2>Su código de participación es:</h2>
+    <p class="participation-code">{{ participationCode }}</p>
+
+    
+
+    <button nz-button nzType="primary" class="pay-button" (click)="goBack()">Nueva compra</button>
+  </div>
+</div>

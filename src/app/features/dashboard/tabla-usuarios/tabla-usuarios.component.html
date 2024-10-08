@@ -1,0 +1,19 @@
+<nz-card>
+    <nz-table #basicTable [nzData]="userList" nzBordered>
+      <thead>
+        <tr>
+          <th nzWidth="30%">{{ 'TABLE.NAME' | translate }}</th>
+          <th nzWidth="30%">{{ 'TABLE.EMAIL' | translate }}</th>
+          <th nzWidth="40%">{{ 'TABLE.AMOUNT_COP' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of basicTable.data">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.amount | currency:'COP':'symbol' }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-card>
+  

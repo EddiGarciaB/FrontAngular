@@ -1,0 +1,18 @@
+.campaign-list 
+  display: flex
+  gap: 20px
+  justify-content: center
+
+  // Para pantallas pequeñas (móviles)
+  @media (max-width: 600px)
+    flex-direction: column
+    gap: 10px
+
+  // Para pantallas medianas (tablets)
+  @media (min-width: 601px) and (max-width: 1024px)
+    gap: 15px
+    flex-wrap: wrap
+
+  // Para pantallas grandes (escritorios)
+  @media (min-width: 1025px)
+    gap: 20px

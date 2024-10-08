@@ -1,0 +1,22 @@
+{
+  "/api": {
+    "target": "http://localhost:8083",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/auth": {
+    "target": "http://localhost:8083",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+
+  "/camaras": {
+        "target": "http://localhost:8089",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

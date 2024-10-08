@@ -1,0 +1,86 @@
+{
+  "LOGIN": {
+    "WELCOME": "¡Bienvenido(a)!",
+    "DESCRIPTION": "Al sistema de Crowdfunding más grande de Latinoamérica",
+    "USER_LABEL": "Usuario",
+    "USER_PLACEHOLDER": "Ingresa usuario",
+    "PASSWORD_LABEL": "Contraseña",
+    "PASSWORD_PLACEHOLDER": "Ingresa contraseña",
+    "LOGIN_BUTTON": "Iniciar",
+    "COPYRIGHT": "© Copyright Starkent 2024. Todos los derechos reservados - Versión 1.0"
+  },
+  "HEADER": {
+    "CURRENT_DATE": "Fecha actual",
+    "USER_MENU": {
+      "HELP": "Ayudas",
+      "LOGOUT": "Cerrar sesión"
+    },
+    "LANGUAGE": {
+      "ENGLISH": "Inglés",
+      "SPANISH": "Español"
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© Copyright Starken 2024. Todos los derechos reservados - Versión 1.0"
+  },
+  "TABLE": {
+    "USER_CONTRIBUTIONS": "Contribuciones de Usuarios",
+    "NAME": "Nombre",
+    "EMAIL": "Correo Electrónico",
+    "AMOUNT_COP": "Cantidad (COP)"
+  },
+  "SUBHEADER": {
+    "REVISION_DETECCIONES": {
+      "TITLE": "Resumen de contribuciones",
+      "DESCRIPTIONS": "Puedes visualizar los usuarios que han contribuido, su correo y su monto"
+    },
+    "APROBACION_DETECCIONES": {
+      "TITLE": "Puedes  administrar a los usuarios",
+      "DESCRIPTIONS": "Puedes administrar a los usuarios"
+    },
+    "ADMON_CAMARAS": {
+      "TITLE": "Pública una nueva campaña",
+      "DESCRIPTIONS": "Pública para ayudar a nuevas personas"
+    },
+    "ADMON_C": {
+      "TITLE": "Personas que aportan",
+      "DESCRIPTIONS": "Puedes ver la cantidad de dinero aportado"
+    },
+    "GROUP_REVIEW": "Revisión grupal",
+    "INDIVIDUAL_REVIEW": "Revisión individual"
+  },
+  "SIDEBAR": {
+    "USUARIOS": "Usuarios",
+    "REVISION_DE_USUARIOS": "Revisión de Usuarios",
+    "CAMPAÑAS": "Campañas",
+    "REGISTRAR_CAMPAÑA": "Registrar Campaña",
+    "TOTAL_RECAUDADO": "Total Recaudado",
+    "RESUMEN_MES": "Resumen Mensual"
+  },
+  "TABLEU": {
+    "USER_NAME": "Nombre de Usuario",
+    "EMAIL": "Correo",
+    "LAST_CONTRIBUTION_DATE": "Fecha del Último Aporte",
+    "ACTIONS": "Acciones",
+    "CHANGE_PASSWORD": "Enviar publicidad"
+  },
+  "MODAL": {
+    "CHANGE_PASSWORD_TITLE": "Enviar publicidad",
+    "NEW_PASSWORD": "Nueva Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar Contraseña",
+    "SUBMIT": "Enviar"
+  },
+  "FORM": {
+    "TITLE": "Título",
+    "DESCRIPTION": "Descripción",
+    "CURRENCY": "Moneda",
+    "TARGET_AMOUNT": "Meta a Alcanzar",
+    "SUBMIT": "Enviar"
+  },
+  "SUMMARY": {
+    "USER_NAME": "Nombre de Usuario",
+    "COUNTRY": "País",
+    "AMOUNT": "Monto",
+    "TOTAL_AMOUNT": "Monto Total"
+  }
+}

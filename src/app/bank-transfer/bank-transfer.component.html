@@ -1,0 +1,30 @@
+<div class="bank-transfer-container">
+  <h2>Pago por Transferencia Bancaria</h2>
+  <p class="instruction">Por favor, realice la transferencia al número de cuenta proporcionado y adjunte el comprobante de la transacción.</p>
+
+  <nz-card>
+    <form [formGroup]="bankTransferForm" (ngSubmit)="submit()">
+      <nz-form-item>
+        <nz-form-label nzFor="bank_account">Número de Cuenta</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor ingrese el número de cuenta">
+          <p class="bank-account-info">123223232443438</p>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzFor="transfer_receipt">Comprobante de Transferencia</nz-form-label>
+        <nz-form-control nzErrorTip="Por favor adjunte el comprobante">
+          <input nz-input formControlName="transfer_receipt" type="file" id="transfer_receipt" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <p class="instructions-text">* Asegúrese de que el archivo adjunto sea claro y legible.</p>
+
+      <!-- Cambiar el tipo del botón a "submit" para asegurar el envío del formulario -->
+      <button nz-button nzType="primary" type="submit" [disabled]="!bankTransferForm.valid">
+        Pagar con Transferencia
+      </button>
+      
+    </form>
+  </nz-card>
+</div>

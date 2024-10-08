@@ -1,0 +1,23 @@
+.campaign-grid
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  justify-content: center
+
+app-campaigns
+  flex: 1 0 30%
+  max-width: 30%
+  box-sizing: border-box
+  margin-bottom: 20px
+  padding: 10px
+  background-color: #f9f9f9
+  border-radius: 8px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+  @media (max-width: 768px)
+    flex: 1 0 45%
+    max-width: 45%
+
+  @media (max-width: 480px)
+    flex: 1 0 100%
+    max-width: 100%

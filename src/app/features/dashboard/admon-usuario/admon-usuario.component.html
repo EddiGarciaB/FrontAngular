@@ -1,0 +1,42 @@
+<nz-card>
+    <nz-table #basicTable [nzData]="users" nzBordered [nzShowPagination]="true" [nzPageSize]="5">
+      <thead>
+        <tr>
+          <th nzWidth="30%">{{ 'TABLEU.USER_NAME' | translate }}</th>
+          <th nzWidth="30%">{{ 'TABLEU.EMAIL' | translate }}</th>
+          <th nzWidth="20%">{{ 'TABLEU.LAST_CONTRIBUTION_DATE' | translate }}</th>
+          <th nzWidth="20%">{{ 'TABLEU.ACTIONS' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of basicTable.data">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.lastContribution }}</td>
+          <td>
+            <button nz-button nzType="primary" (click)="openChangePasswordModal(user)">
+              {{ 'TABLEU.CHANGE_PASSWORD' | translate }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-card>
+  
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="{{ 'MODAL.CHANGE_PASSWORD_TITLE' | translate }}" (nzOnCancel)="closeChangePasswordModal()" (nzOnOk)="changePassword()">
+    <form nz-form [formGroup]="validateForm">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="newPassword">{{ 'MODAL.NEW_PASSWORD' | translate }}</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please enter the new password">
+          <input nz-input type="password" id="newPassword" formControlName="newPassword" required />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="confirmPassword">{{ 'MODAL.CONFIRM_PASSWORD' | translate }}</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please confirm the new password">
+          <input nz-input type="password" id="confirmPassword" formControlName="confirmPassword" required />
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-modal>
+  

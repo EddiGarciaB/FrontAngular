@@ -1,0 +1,165 @@
+.hero
+  width: 100%
+  height: 100vh
+  background-image: url('../../../assets/images/1.jpeg')
+  background-size: cover
+  background-position: center
+
+  .title-hero
+    color: rgba(0, 0, 0, 0)
+
+  @media (max-width: 768px)
+    width: 100%
+    height: auto
+    background-size: cover
+    background-position: center
+
+.header
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  padding: 1rem 2rem
+  
+  .header-logo
+    width: 40%
+    height: auto
+
+    .logo
+      width: 100%
+      height: auto
+      margin-left: 20%
+      margin-top: -10%
+
+  .header-botton
+    width: 50%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-right:10%
+
+    @media (max-width: 768px)
+      width: 100%
+      justify-content: center
+      margin-right: 0
+
+    .btn-registro, .btn-login
+      height: auto
+      padding: 1rem
+      margin-right: 1rem
+      font-size: 0.9rem
+
+.main
+  display: flex
+  justify-content: center
+  height: 100%
+  align-items: center
+  margin-top: 10%
+
+  @media (max-width: 768px)
+    margin-top: 5%
+
+  .div-main
+    width: 90%
+
+    .div-main_text
+      color: white
+      font-size: 1.5rem
+      text-align: center
+
+    .div-main_btn
+      margin-top: 5%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      @media (max-width: 768px)
+        flex-direction: column
+
+      .btn-apoyar, .btn-crear
+        width: 100%
+        margin: 1rem 0
+        padding: 1rem 3rem
+
+.section-about
+  padding: 3rem 1rem
+  background-color: #f9f9f9
+  display: flex
+  justify-content: center
+
+  .about-container
+    display: flex
+    flex-direction: row
+    max-width: 1200px
+    width: 100%
+    gap: 2rem
+
+    @media (max-width: 768px)
+      flex-direction: column
+      align-items: center
+
+  .about-image
+    .img-pay
+      width: 50% !important
+    
+    @media (max-width: 768px)
+      .img-pay
+        width: 50% !important  // Ajuste para dispositivos móviles
+
+  .about-info
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    .about-title
+      font-size: 1.5rem
+      text-align: center
+
+    .about-description
+      font-size: 1rem
+      margin-bottom: 1rem
+      text-align: center
+
+    .terms-label
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 0.9rem
+      margin-bottom: 1.5rem
+
+      .terms-checkbox
+        margin-right: 0.5rem
+
+    .about-action
+      display: flex
+      justify-content: center
+
+      .btn-participar
+        background-color: #cccccc
+        border: none
+        padding: 0.8rem 1.5rem
+        font-size: 1rem
+        color: white
+        font-weight: bold
+        border-radius: 5px
+        cursor: not-allowed
+        transition: background-color 0.3s ease
+
+        &.active
+          background-color: #ffc107
+          cursor: pointer
+
+        &:hover
+          background-color: #e0a800
+
+          
+@media (max-width: 768px)
+  .about-image
+    .img-pay
+      width: 50%
+      height: auto
+      display: block
+      margin: 0 auto
+
+  

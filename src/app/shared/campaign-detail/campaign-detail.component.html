@@ -1,0 +1,16 @@
+<nz-card class="campaign-detail-card">
+    <img [src]="campaign.imageUrl" alt="{{ campaign.title }}" class="campaign-image">
+    <div class="campaign-content">
+      <h2 class="campaign-title">{{ campaign.title }}</h2>
+      <p class="campaign-description">{{ campaign.description }}</p>
+      <div class="campaign-info">
+        <p><strong>Precio:</strong> {{ campaign.amountRaised | currency:campaign.currency:'symbol':'1.0-0' }}</p>
+        <p><strong>Meta:</strong> {{ campaign.targetAmount | currency:campaign.currency:'symbol':'1.0-0' }}</p>
+        <p><strong>Participantes:</strong> {{ campaign.donors }}</p>
+        <p><strong>Vence:</strong> <time>{{ campaign.endDate | date:'mediumDate' }}</time></p>
+      </div>
+      <button nz-button nzType="primary" class="btn-donate" (click)="navigateToDonar()">Participar</button>
+    </div>
+  </nz-card>
+  <app-footer-home></app-footer-home>
+  

@@ -1,0 +1,99 @@
+@import "../../../../styles.sass"
+
+.videoPlay
+  display: block
+  max-width: 592px
+  height: 362px
+  position: relative
+  margin: 0
+
+.videoPreview
+  display: flex
+  max-width: 180px
+  max-height: 110px
+  cursor: pointer
+
+.play-button
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 50px /* ajusta el tamaño según sea necesario */
+  height: 50px /* ajusta el tamaño según sea necesario */
+  fill: #fff /* color del icono */
+  cursor: pointer /* para mostrar el cursor como un puntero */
+
+.carousel-container
+  display: flex
+  height: 100%
+  width: 100%
+
+  .carousel
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 10px
+    background-color: white
+
+    .carousel-item
+      display: block
+      max-width: 592px
+      height: 362px
+      position: relative
+      margin: 0
+
+      img
+        width: 100%
+        max-height: 362px
+
+    .carousel-indicators
+      display: flex
+      position: initial
+      gap: 16px
+      position: relative
+      z-index: 1
+      margin: 0
+
+      div
+        img
+          max-width: 180px
+          max-height: 110px
+          cursor: pointer
+      .active
+        outline: 3px solid #F79433
+        opacity: 0.7
+
+    .nav-container
+      width: 100%
+      display: flex
+      position: static
+      justify-content: space-between
+      align-items: center
+      z-index: 0
+      //bottom: 70px
+
+      .navs
+        font-size: 16px
+        color: $--primary
+        cursor: pointer
+        transition: all 0.3s
+
+        &:hover
+          scale: 1.5
+          transition: all 0.3s
+
+    .dots-container
+      display: flex
+      position: relative
+      gap: 5px
+
+      .dot
+        width: 10px
+        height: 10px
+        background-color: #9C9C9C
+        border-radius: 50%
+        cursor: pointer
+
+      .active
+        background-color: $--primary

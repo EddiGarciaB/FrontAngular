@@ -1,0 +1,270 @@
+/* ================================
+   Variables
+   ================================ */
+$--primary: #335AB7
+$--primary-light: #597AC8
+$--primary-dark: #294B9E
+$--header-color: #262236
+$--white-040: #FBFBFB
+
+$--text-main: #1A1F2F
+$--text-muted: #555555
+$card-box-shadow: 0px 3px 6px #00000029
+
+*
+  transform: none !important
+
+
+
+
+/* ================================
+   Colores - backgrounds
+   ================================ */
+.bg-color-gray
+  background-color: #F2F2F3
+
+.border-bottom-primary
+  border-bottom: 0.4px solid $--primary
+
+/* ================================
+   Botones
+   ================================ */
+.ant-btn-link
+  color: $--primary
+  span
+    text-decoration: underline
+    font-weight: bold
+  &:hover
+    color: $--primary-light
+  &:active
+    color: $--primary-dark
+
+.ant-btn-default
+  border-color: $--primary
+  color: $--primary
+  &:hover
+    border-color: $--primary-dark
+    color: $--white-040
+    background-color: $--primary-dark
+  &:active
+    border-color: $--primary-light
+    background-color: $--primary-light
+
+.ant-btn-primary
+  background-color: $--primary
+  border-color: $--primary
+  color: $--white-040
+  &:hover
+    background-color: $--primary-light
+    border-color: $--primary-light
+  &:active
+    background-color: $--primary-dark
+    border-color: $--primary-dark
+
+.ant-btn-primary[disabled]
+  background-color: #C8CCD0
+  color: #555555
+  border-color: #C8CCD0
+
+nz-switch
+  .ant-switch-checked
+    background-color: $--primary
+
+/* ================================
+   Tablas
+   ================================ */
+:host
+  ::ng-deep
+    nz-pagination
+      ul
+        li.ant-pagination-item
+          border-color: $--primary
+          &:hover
+            background-color: $--primary-light
+            border-color: $--primary-light
+            color: $--white-040
+          a
+            color: $--primary
+            text-decoration: none
+            &:hover
+              color: $--white-040
+        li.ant-pagination-item-active
+          background-color: $--primary
+          border-color: $--primary
+          color: $--white-040
+          &:hover
+            background-color: $--primary-light
+            border-color: $--primary-light
+          a
+            color: $--white-040
+            text-decoration: none
+        li.ant-pagination-next
+          .ant-pagination-item-link
+            border-color: $--primary
+            &:hover
+              background-color: $--primary-light
+              border-color: $--primary-light
+            span.anticon
+              color: $--primary
+              height: 100%
+              width: 100%
+              display: flex
+              justify-content: center
+              &:hover
+                color: $--white-040
+        li.ant-pagination-prev
+          .ant-pagination-item-link
+            border-color: $--primary
+            &:hover
+              background-color: $--primary-light
+              border-color: $--primary-light
+            span.anticon
+              color: $--primary
+              height: 100%
+              width: 100%
+              display: flex
+              justify-content: center
+              &:hover
+                color: $--white-040
+        li.ant-pagination-options
+          nz-select
+            &:hover
+                border-color: $--primary-light
+            .ant-select-selector
+              border: 1px solid $--primary
+              &:hover
+                border-color: $--primary-light
+              .ant-select-selection-item
+                color: $--primary
+                &:hover
+                  color: $--primary-light
+            .ant-select-arrow
+              span.anticon
+                color: $--primary
+
+th.ant-table-cell
+  background-color: $--header-color
+  color: $--white-040
+
+/* ================================
+   Tamaños - Width - FontSize
+   ================================ */
+.w-5
+  width: 5%
+.w-10
+  width: 10%
+.w-15
+  width: 15%
+.w-20
+  width: 20%
+.w-25
+  width: 25%
+.w-30
+  width: 30%
+.w-35
+  width: 35%
+.w-40
+  width: 40%
+.w-45
+  width: 45%
+.w-50
+  width: 50%
+.w-55
+  width: 55%
+.w-60
+  width: 60%
+.w-65
+  width: 65%
+.w-70
+  width: 70%
+.w-75
+  width: 75%
+.w-80
+  width: 80%
+.w-85
+  width: 85%
+.w-90
+  width: 90%
+.w-95
+  width: 95%
+.w-100
+  width: 100%
+.w-auto
+  width: auto
+
+.fs-10
+  font-size: 10px
+.fs-11
+  font-size: 11px
+.fs-12
+  font-size: 12px
+.fs-13
+  font-size: 13px
+.fs-14
+  font-size: 14px
+.fs-15
+  font-size: 15px
+.fs-16
+  font-size: 16px
+.fs-17
+  font-size: 17px
+.fs-18
+  font-size: 18px
+.fs-19
+  font-size: 19px
+.fs-20
+  font-size: 20px
+.fs-25
+  font-size: 25px
+.fs-30
+  font-size: 30px
+.fs-35
+  font-size: 35px
+
+/* ================================
+   Modal
+   ================================ */
+.ant-modal-content
+  .ant-modal-close
+    .anticon
+      color: $--white-040
+  .ant-modal-header
+    background: $--header-color
+    .ant-modal-title
+      color: $--white-040
+  .ant-modal-footer
+    border: none
+
+/* ================================
+   Estilos propios
+   ================================ */
+
+.img-fluid
+  width: 100%
+  display: block
+
+nz-select
+  width: 100%
+
+.form-group
+  label
+    color: #545454
+    font-size: 14px
+    font-weight: bold
+    display: block
+    margin-bottom: 4px
+
+.main-view
+  width: calc( 100vw - 50px )
+  padding: 0 30px 0 20px
+  background-color: #FBFBFB
+  position: relative
+  z-index: 1
+  padding-top: 0.5rem
+
+.card.card-shadow
+  box-shadow: $card-box-shadow
+
+.img-fluid
+  width: 100%
+  display: block

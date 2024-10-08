@@ -1,0 +1,91 @@
+<div class="container-fluid login-container">
+    <div class="row h-100 div-two">
+        <div class="col-6 h-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="row align-items-center justify-content-center login w-100">
+                <div class="col-12">
+                    <div class="row justify-content-center">
+                    </div>
+                    <div class="row ">
+                        <div class="col-8 div-form">
+                            <form [formGroup]="validateForm" action="">
+                                <div class="row align-items-center flex-column">
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="usuario">Titúlo de la campaña</label>
+                                            <input nz-input placeholder="Ingresa tu nombre" formControlName="userName" type="text" id="usuario"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="usuario">Descripción</label>
+                                            <textarea nz-input placeholder="Ingresa tu apellido" formControlName="lastName" type="text" id="apellido"> </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="telefono">Teléfono de contacto</label>
+                                            <input nz-input placeholder="Ingresa tu teléfono" formControlName="phone" type="text" id="telefono"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="usuario">Monto a recaudar</label>
+                                            <input nz-input placeholder="{{ 'LOGIN.USER_PLACEHOLDER' | translate }}" formControlName="userName" type="text" id="usuario"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="contraseña">E-mail de contacto</label>
+                                            <input nz-input placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}" formControlName="email" type="email" id="contraseña"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="contraseña">Adjunta fotos</label>
+                                            <input nz-input placeholder="{{ 'LOGIN.PASSWORD_PLACEHOLDER' | translate }}" formControlName="password" type="file" id="contraseña"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="acceptPolicies" formControlName="acceptPolicies">
+                                            <label class="form-check-label" for="acceptPolicies">Acepto las políticas de tratamiento de datos</label>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="acceptPolicies" formControlName="acceptPolicies">
+                                            <label class="form-check-label" for="acceptPolicies">Recibir nuestro boletín informativo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button nz-button nzType="primary" nzBlock (click)="submitForm()">{{ 'LOGIN.LOGIN_BUTTON' | translate }}</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="row justify-content-center registe-login">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-8">
+                            ¿Ya tienes una cuenta?
+                                <a href="">Iniciar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="row justify-content-center">
+                <div class="col-auto">
+                    {{ 'LOGIN.COPYRIGHT' | translate }}
+                </div>
+            </footer>
+        </div>
+        <div class="col-6 h-100 login-register">
+            <div class="bg--container h-100">
+                <div class="d-flex justify-content-center align-items-center h-100 img-fluid">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

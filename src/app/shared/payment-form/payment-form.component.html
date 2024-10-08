@@ -1,0 +1,55 @@
+<div class="payment-form-card">
+  <form [formGroup]="paymentForm">
+    <!-- Nombre -->
+    <div class="form-item">
+      <label for="name">Nombre</label>
+      <input formControlName="name" id="name" placeholder="Ingrese su nombre" />
+    </div>
+
+    <!-- Correo -->
+    <div class="form-item">
+      <label for="email">Correo</label>
+      <input formControlName="email" id="email" placeholder="Ingrese su correo" />
+    </div>
+
+    <!-- Selección de País -->
+    <div class="form-item search-select">
+      <label for="country">País</label>
+      <div class="search-select-container">
+        <input
+          type="text"
+          placeholder="Buscar país"
+          (input)="filterCountries($event)"
+          [value]="selectedCountryName"
+          (focus)="showDropdown()"
+          (blur)="hideDropdown()"
+        />
+        <ul class="dropdown" *ngIf="isDropdownVisible && filteredCountries.length > 0">
+          <li *ngFor="let country of filteredCountries" (click)="onCountryChange(country.name)">
+            {{ country.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Teléfono -->
+    <div class="form-item">
+      <label for="phone">Teléfono</label>
+      <div class="phone-container">
+        <img *ngIf="selectedFlag" [src]="selectedFlag" alt="Bandera" class="flag" />
+        <span *ngIf="selectedCountryCallingCode" class="country-code">{{ selectedCountryCallingCode }}</span>
+        <input formControlName="phone" id="phone" placeholder="Ingrese su teléfono" />
+      </div>
+    </div>
+
+    <!-- Botón de Enviar -->
+    <div class="form-item">
+      <button type="button" class="enviar" (click)="submitForm()" [disabled]="isLoading">Enviar</button>
+    </div>
+
+    <!-- Loader -->
+    <div *ngIf="isLoading" class="loader">
+      <p>Enviando...</p>
+    </div>
+  </form>
+</div>
